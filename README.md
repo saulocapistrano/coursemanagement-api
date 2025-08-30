@@ -1,10 +1,7 @@
-    ### 📄 `README.md`
-
-```md
 # 📚 Course Management API
 
 API RESTful para gerenciamento de cursos, turmas, usuários e matrículas — desenvolvida com Node.js, Express e Prisma ORM.  
-Este projeto foi desenvolvido como parte de um desafio técnico para a vaga de Desenvolvedor Fullstack no **Dot Digital Group**.
+
 
 ---
 

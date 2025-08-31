@@ -1,5 +1,13 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@db/*": ["database/*"],
+      "@modules/*": ["modules/*"],
+      "@routes/*": ["routes/*"],
+      "@config/*": ["config/*"]
+    },
+  
     "target": "ES2020",
     "module": "CommonJS",
     "rootDir": "./src",

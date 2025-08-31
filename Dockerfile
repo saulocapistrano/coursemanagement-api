@@ -1,5 +1,5 @@
 # Imagem base oficial do Node
-FROM node:20
+FROM node:18
 
 # Diretório de trabalho dentro do container
 WORKDIR /app
@@ -12,6 +12,9 @@ RUN npm install
 
 # Copia o restante da aplicação
 COPY . .
+
+# ⚠️ GERA O CLIENT DO PRISMA
+RUN npx prisma generate
 
 # Expõe a porta do app (mapeada no docker-compose)
 EXPOSE 3000

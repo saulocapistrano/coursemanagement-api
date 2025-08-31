@@ -2,10 +2,12 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "paths": {
+      "@middlewares/*": ["middlewares/*"],
       "@db/*": ["database/*"],
       "@modules/*": ["modules/*"],
       "@routes/*": ["routes/*"],
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@errors/*": ["errors/*"]
     },
   
     "target": "ES2020",

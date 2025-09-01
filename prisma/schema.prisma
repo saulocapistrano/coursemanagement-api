@@ -8,7 +8,7 @@ datasource db {
 }
 
 model Course {
-  id          String   @id @default(uuid())
+  id          Int      @id @default(autoincrement())
   title       String
   description String
   themes      String[]
@@ -17,9 +17,9 @@ model Course {
 }
 
 model Class {
-  id          String   @id @default(uuid())
-  courseId    String
-  course      Course   @relation(fields: [courseId], references: [id])
+  id          Int      @id @default(autoincrement())
+  courseId    Int
+  course      Course   @relation(fields: [courseId], references: [id], onDelete: Cascade)
   title       String
   description String
   capacity    Int
@@ -30,16 +30,16 @@ model Class {
 }
 
 model User {
-  id          String   @id @default(uuid())
+  id          Int      @id @default(autoincrement())
   name        String
   email       String   @unique
   enrollments Enrollment[]
 }
 
 model Enrollment {
-  id       String @id @default(uuid())
-  userId   String
-  classId  String
+  id       Int    @id @default(autoincrement())
+  userId   Int
+  classId  Int
   user     User   @relation(fields: [userId], references: [id])
   class    Class  @relation(fields: [classId], references: [id])
 }

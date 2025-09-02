@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import { CourseService } from '../services/CourseService';
+import { CourseRepository } from '../repositories/CourseRepository';
 
-const service = new CourseService();
+const service = new CourseService(new CourseRepository());
 
 export const CourseController = {
   async create(req: Request, res: Response) {
